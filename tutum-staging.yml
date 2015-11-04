@@ -1,0 +1,18 @@
+web-staging:
+  image: 'tutum.co/borjaburgos/demo:staging'
+  restart: always
+  autoredeploy: true
+  ports:
+      - "80:80"
+  links:
+    - "redis-staging:redis"
+  environment:
+    - NAME=mundo
+  tags:
+    - staging
+
+redis-staging:
+  image: redis
+  restart: always
+  tags:
+    - staging
