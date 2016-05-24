@@ -18,7 +18,7 @@ def hello():
     html = "<h3>Hello {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}<br/>" \
-           "<img src=https://s3.amazonaws.com/f.cl.ly/items/3f3Q0i2b0S252A28150n/docker_cloud.png>"
+           "<img src=https://s3.amazonaws.com/f.cl.ly/items/3G0u1j1Y3z2H2M1z1M2A/docker_cloud.png>"
     return html.format(name=os.getenv('NAME', "world"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
